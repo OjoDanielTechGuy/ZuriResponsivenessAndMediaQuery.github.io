@@ -121,10 +121,9 @@ input::placeholder{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                width: 50%;    
+                align-items: center;     
+                margin: 30px auto;        
         }
-
             div h3, p{
                 text-align: center;
             }
@@ -144,7 +143,7 @@ input::placeholder{
     p {
         text-align: center;
         width: 70%;
-        margin-left: 50px;
+        margin-left: 35px;
     }
 
     h3{
