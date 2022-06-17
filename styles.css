@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(images/bg-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    font-family: Roboto, sans-serif, Arial;
+    font-size: 16px;
+}
+
+button, input{
+font-family: Roboto, sans-serif, Arial;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    width: 60%;
+    min-width: 450px;
+}
+
+#leftSection{
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
+
+#leftSection h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#leftSection p{
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;;
+}
+
+#rightSection
+{
+    width: 100%;
+}
+
+.trialbtn{
+    border: none;
+    background-color: hsl(248, 32%, 49%);
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.post-amount {
+    font-weight: lighter;
+}
+
+.input-container{
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 7px;
+    margin-top: 15px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+input{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid hsla(246, 25%, 77%, 0.3);
+    border-radius: 3px;
+}
+
+input::placeholder{
+    padding-left: 2px;
+    font-family: Roboto, Arial;
+}
+
+.claim-trialbtn{
+    border: none;
+    background-color: hsl(154, 83%, 39%);
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.c-tc{
+    color: hsl(246, 25%, 77%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.tc{
+    color: hsl(0, 100%, 74%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tc:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px){
+        #container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;     
+                margin: 30px auto;        
+        }
+            div h3, p{
+                text-align: center;
+            }
+
+}
+
+@media (max-width: 375px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+    }
+
+    div h3,
+    p {
+        text-align: center;
+        width: 70%;
+        margin-left: 35px;
+    }
+
+    h3{
+        margin-top: 150px;
+    }
+
+
+
+    
+
+    form{
+        width: 80%;
+        margin: 10px;
+    }
+
+}
+
+
+
+
