@@ -21,7 +21,6 @@ font-family: Roboto, sans-serif, Arial;
     height: 100vh;
     margin: auto;
     width: 60%;
-    min-width: 450px;
 }
 
 #leftSection{
@@ -116,16 +115,22 @@ input::placeholder{
     text-decoration: underline;
 }
 
+
+
+
 @media screen and (max-width: 800px){
         #container {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;     
-                margin: 30px auto;        
+                align-items: center;
+                width: 80%;   
+                margin: auto; 
         }
+
             div h3, p{
                 text-align: center;
+                margin: auto 10px;
             }
 
 }
@@ -136,27 +141,24 @@ input::placeholder{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 30px auto;
+        margin: 0 10px;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
     }
 
     div h3,
     p {
         text-align: center;
         width: 70%;
-        margin-left: 35px;
+        margin-left: 30px;
     }
-
-    h3{
-        margin-top: 150px;
-    }
-
-
-
-    
 
     form{
-        width: 80%;
-        margin: 10px;
+        width: 75%;
+        margin: 0 8px;
     }
 
 }
