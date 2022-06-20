@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -19,14 +20,15 @@ font-family: Roboto, sans-serif, Arial;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: auto;
-    width: 60%;
+    width: 100%;
 }
 
 #leftSection{
     width: 100%;
     color: white;
     padding: 20px;
+    width: 400px;
+    max-width: 100%;
 }
 
 #leftSection h3{
@@ -38,11 +40,6 @@ font-family: Roboto, sans-serif, Arial;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 1px;;
-}
-
-#rightSection
-{
-    width: 100%;
 }
 
 .trialbtn{
@@ -63,26 +60,36 @@ font-family: Roboto, sans-serif, Arial;
     font-weight: lighter;
 }
 
-.input-container{
+.form-container{
     background-color: white;
-    padding: 1.5em;
-    border-radius: 7px;
+    padding: 10px 30px;
     margin-top: 15px;
+    border-radius: 7px;
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 100%;
+    
 }
+ 
+.form-control{
+    margin: 0 auto;
+} 
 
-input{
+.form-control input{
     width: 100%;
-    margin: 10px auto;
     padding: 10px;
+    margin: 10px auto;
     box-sizing: border-box;
-    border: 1px solid hsla(246, 25%, 77%, 0.3);
+    border: 1px solid hsla(246, 25%, 77%, 0.6);
     border-radius: 3px;
+    font-family: inherit;
+    
 }
 
 input::placeholder{
     padding-left: 2px;
     font-family: Roboto, Arial;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .claim-trialbtn{
@@ -103,6 +110,7 @@ input::placeholder{
     color: hsl(246, 25%, 77%);
     font-size: 11px;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .tc{
@@ -115,7 +123,28 @@ input::placeholder{
     text-decoration: underline;
 }
 
+.form-container input:invalid:focus{ /**This syntax shows when an input element is focus on it should give it a background an a space adjustment with an online color*/
+    background: url(./images/icon-error.svg) no-repeat 96%center white;
+    outline: 2px solid hsl(0, 100%, 74%);
+}
 
+.form-container small, .emessage{
+    display: none;
+}
+
+.form-container input:required:focus ~ small{
+    display: block;
+    color: hsl(0, 100%, 74%);
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+    visibility: visible;
+}
+
+
+input[type=email]:invalid:focus::-webkit-input-placeholder{
+    color: hsl(0, 100%, 74%);
+}
 
 
 @media screen and (max-width: 800px){
@@ -132,6 +161,10 @@ input::placeholder{
                 text-align: center;
                 margin: auto 10px;
             }
+            
+            body{
+                background-image: url(./images/bg-mobile.png);
+            }
 
 }
 
@@ -147,6 +180,7 @@ input::placeholder{
     body{
         margin: 0;
         padding: 0;
+        background-image: url(./images/bg-mobile.png);
     }
 
     div h3,
