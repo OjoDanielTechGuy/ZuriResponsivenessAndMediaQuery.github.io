@@ -12,75 +12,81 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
     </style>
+
+    <script src="formvalidation.js"></script>
   </head>
   <body>
-    <main>
-      <div id="container">
-        <div id="leftSection">
-          <h3>Learn to code by watching others</h3>
-          <p>
-            See how experienced developers solve problems in real-time. Watching
-            scripted tutorials is great, but understanding how developers think
-            is invaluable.
-          </p>
-        </div>
+    <main id="container">
+      <div id="leftSection">
+        <h3>Learn to code by watching others</h3>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
 
-        <div id="rightSection">
-          
-
-          <form action="">
-
-            <button class="trialbtn" type="submit">
-            Try it free 7 days
+      <form action="" id="form">
+        <div class="form-control">
+          <button class="trialbtn" type="submit">
+            Try it free 7S days
             <span class="post-amount">then $20/mo. thereafter</span>
           </button>
-
-          <div class="input-container">
-            <div class="detials-input">
-              <div>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  required
-                  name="firstname"
-                />
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  required
-                  name="lastname"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  required
-                  name="email"
-                />
-              </div>
-              <div>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  required
-                  name="password"
-                />
-              </div>
-            </div>
-            <button class="claim-trialbtn" type="submit">
-              CLAIM YOUR FREE TRIAL
-            </button>
-            <p class="c-tc">
-              By clicking the button you are agreeing to our
-              <span class="tc">Terms and Services</span>
-            </p>
-          </form>
         </div>
-      </div>
-      </div>
+
+        <div class="form-container">
+          <div class="form-control error">
+            <input
+              type="text"
+              placeholder="First Name"
+              required
+              name="firstname"
+              id="fname"
+            />
+            <small>First name cannot be empty</small>
+          </div>
+
+          <div class="form-control success">
+            <input
+              type="text"
+              placeholder="Last Name"
+              required
+              name="lastname"
+              id="lname"
+            />
+            <small>Last name cannot be empty</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="email"
+              placeholder="@email@example/com"
+              required
+              name="email"
+              id="email"
+            />
+            <small>Looks like this is not an email</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              name="password"
+              id="password"
+              minlength="8"
+            />
+            <small>Password cannot be empty</small>
+          </div>
+
+          <button class="claim-trialbtn" type="submit">
+            CLAIM YOUR FREE TRIAL
+          </button>
+          <p class="c-tc">
+            By clicking the button you are agreeing to our
+            <span class="tc">Terms and Services</span>
+          </p>
+        </div>
+      </form>
     </main>
   </body>
 </html>
